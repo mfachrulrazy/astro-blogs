@@ -1,0 +1,19 @@
+---
+const { frontmatter } = Astro.props;
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import '../styles/global.css'
+import Layout from './Layout.astro';
+---
+<Layout title={frontmatter.author}>
+  <main>
+    <Header/>
+    <p>{frontmatter.pubDate.slice(0,10)}</p>
+    
+    <p><em>{frontmatter.description}</em></p>
+    <p>Written by: {frontmatter.author}</p>
+    <img src={frontmatter.postImage} width="300" />
+    <slot />
+    <Footer/>
+  </main>
+</Layout>

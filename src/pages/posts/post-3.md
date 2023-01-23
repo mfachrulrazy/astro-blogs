@@ -1,5 +1,6 @@
 ---
-title: My Third Blog Post
+layout: ../../layouts/MdPostsLayout.astro
+title: Postingan ke 3
 author: Astro Learner
 description: "I had some challenges, but asking in the community really helped!"
 image:

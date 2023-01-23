@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 
 const pageTitle = 'About Page';
 
@@ -22,9 +24,7 @@ const goal = 3;
 
 <Layout title="About Pagess">
 	<main>
-		<a href="/">Home</a>
-  	<a href="/about/">About</a>
-  	<a href="/blog/">Blog</a>
+		<Header />
 		<h1>Page <span class="text-gradient">About Astro</span></h1>
 		
 		<h2 class="text-gradient">{pageTitle}</h2>
@@ -55,5 +55,6 @@ const goal = 3;
 		{happy && <p>I am happy to be learning Astro!</p>}
 		{finished && <p>I finished this tutorial!</p>}
 		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+		<Footer />
 	</main>
 </Layout>

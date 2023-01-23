@@ -2,14 +2,17 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+import Greeting from '../components/Greeting.jsx';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<a href="/">Home</a>
-  	<a href="/about/">About</a>
-  	<a href="/blog/">Blog</a>
+		<Header />
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari", "Apa Kabar"]} />
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
@@ -36,6 +39,7 @@ import '../styles/global.css';
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
 		</ul>
+		<Footer />
 	</main>
 </Layout>
 
