@@ -8,9 +8,9 @@ import Header from '../components/Header.astro';
 const pageTitle = 'About Page';
 
 const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
+  firstName: "Fachrul",
+  country: "Razy",
+  occupation: "Product Designer",
   hobbies: ["photography", "birdwatching", "baseball"],
 };
 
@@ -47,9 +47,9 @@ const goal = 3;
 			} 
 		</ul>
 		<p>My skills are:</p>
-		<ul>
+		<ul role="list" class="link-card-grid">
 			{skills.map((skill) =>
-				<li> <Card href="#" title={skill} body={skill} /> </li>
+				<Card href="#" title={skill} body={skill} />
 				)}
 		</ul>
 		{happy && <p>I am happy to be learning Astro!</p>}

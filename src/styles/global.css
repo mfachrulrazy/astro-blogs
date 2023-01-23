@@ -12,7 +12,7 @@ code {
 }
 
 .dark body {
-  background-color: #0d0950;
+  background-color: #35353a;
   color: #fff;
 }
 
@@ -23,7 +23,7 @@ code {
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: 70ch;
 	}
 	h1 {
 		font-size: 3rem;
